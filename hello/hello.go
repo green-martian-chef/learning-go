@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 /*
 The anatomy of a Go program.
+=======
+/* The anatomy of a Go program.
+>>>>>>> ef941c6e0e82cb02e908b6f4fb512234b624fc3e
 
 Go programs are read from top to bottom, left to right.
 
@@ -15,6 +19,7 @@ import "fmt"
 
 func main() {
 	/*
+<<<<<<< HEAD
 	  This statement prints on the screen the phrase 'Hello, world.'
 	  Here, we use a function `Println()` from the package `fmt`.
 	  To invoke a function from a package you need to write a statement following the bellow structure:
@@ -25,6 +30,18 @@ func main() {
 	  -------------- --- ---------------
 	  fmt.Println()
 	  os.Exit()
+=======
+	   This statement prints on the screen the phrase 'Hello, world.'
+	   Here, we use a function `Println()` from the package `fmt`.
+	   To invoke a function from a package you need to write a statement following the bellow structure:
+
+	   package         .  function()
+	   -------------- --- ---------------
+	   package's name dot function's name
+	   -------------- --- ---------------
+	   fmt.Println()
+	   os.Exit()
+>>>>>>> ef941c6e0e82cb02e908b6f4fb512234b624fc3e
 	*/
 	fmt.Println("Hello, world.")
 }
