@@ -68,4 +68,25 @@ func main() {
 	for i, v := range z {
 		fmt.Println("Index, Value in Z:", i, v)
 	}
+
+	// The 4th element of an array
+	fmt.Println("The 4h element of the array:", z[3])
+
+	// Find the smallest number in the list
+	n := []int{
+		48, 96, 86, 68,
+		57, 82, 63, 70,
+		37, 34, 83, 27,
+		19, 97, 9, 17,
+	}
+
+	min := n[0]
+
+	for _, v := range n {
+		if v < min {
+			min = v
+		}
+	}
+
+	fmt.Println(min)
 }
