@@ -17,6 +17,21 @@ type Circle struct {
 	r float64
 }
 
+// Structs represent a has-a relationship: the struct S has field f.
+type Animal struct {
+	Name string
+}
+
+// Structs also support anonymous fields known as embedded types
+type Dog struct {
+	Animal
+	Breed string
+}
+
+func (a *Animal) talk() string {
+	return "This is my sound."
+}
+
 func main() {
 	c := new(Circle) // var c Circle
 	c1 := Circle{x: 0, y: 0, r: 5}
@@ -41,4 +56,11 @@ func main() {
 	c0 := &c1
 	c0.r = 2
 	fmt.Println(c0.r, c1.r)
+
+	a := Animal{}
+	fmt.Println(a.talk())
+
+	// Since Dog as a relationship with Animal, it can use Animal methods
+	d := Dog{}
+	fmt.Println(d.talk())
 }
